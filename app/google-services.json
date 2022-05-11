@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "584577260434",
+    "project_id": "studentrv-23802",
+    "storage_bucket": "studentrv-23802.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584577260434:android:ecca1355eb2caa68a17f4b",
+        "android_client_info": {
+          "package_name": "com.example.studentrv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584577260434-oa5vp44020rtao86tpesu0bl9fjermcu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_qhiNJ7QTaRMWpdXrhdSLBHp6Q_nBpNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584577260434-oa5vp44020rtao86tpesu0bl9fjermcu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
