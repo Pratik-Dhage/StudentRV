@@ -42,6 +42,8 @@ public class StudentRecyclerView extends AppCompatActivity  {
 
   FirebaseDatabase firebaseDatabase;
 
+    String id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -137,7 +139,7 @@ public class StudentRecyclerView extends AppCompatActivity  {
     private void initData() {
 
         Intent intent = getIntent();
-        String id = intent.getStringExtra("id");
+        id = intent.getStringExtra("id"); //String id is declared Above
 
 
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -238,7 +240,11 @@ public class StudentRecyclerView extends AppCompatActivity  {
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                   //  dialogInterface.dismiss();
+                     //   Toast.makeText(StudentRecyclerView.this, "Fixed", Toast.LENGTH_SHORT).show();
+
                          Intent intent = new Intent(StudentRecyclerView.this,Edit_StudentDetails.class);
+                       intent.putExtra("id",id);
+
                          startActivity(intent);
 
                     }
