@@ -42,7 +42,7 @@ public class StudentRecyclerView extends AppCompatActivity  {
 
   FirebaseDatabase firebaseDatabase;
 
-    String id;
+    String id,id1,name,lastname,dob; // id is used as Firebase Database child // id1 is used as student id
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -242,8 +242,20 @@ public class StudentRecyclerView extends AppCompatActivity  {
                   //  dialogInterface.dismiss();
                      //   Toast.makeText(StudentRecyclerView.this, "Fixed", Toast.LENGTH_SHORT).show();
 
-                         Intent intent = new Intent(StudentRecyclerView.this,Edit_StudentDetails.class);
-                       intent.putExtra("id",id);
+                        Student student =  list.get(position) ; // to get position of selected item
+
+                        // String id1,name,lastname,dob are declared above(instance variables)
+                          id1 = student.getId();
+                          name = student.getName();
+                          lastname = student.getLastname();
+                          dob = student.getDateOfBirth();
+
+
+                        Intent intent = new Intent(StudentRecyclerView.this,Edit_StudentDetails.class);
+                        intent.putExtra("id1",id1);
+                        intent.putExtra("name",name);
+                        intent.putExtra("lastname",lastname);
+                        intent.putExtra("dob",dob);
 
                          startActivity(intent);
 
