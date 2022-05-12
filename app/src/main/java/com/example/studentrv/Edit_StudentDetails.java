@@ -31,44 +31,17 @@ public class Edit_StudentDetails extends AppCompatActivity {
 
         firebaseDatabase = FirebaseDatabase.getInstance();
 
-        Intent intent = getIntent();
+        Intent intent = getIntent();  // get Student Details from StudentRecyclerView
         id1 = intent.getStringExtra("id1");
         name = intent.getStringExtra("name");
         lastname = intent.getStringExtra("lastname");
         dob = intent.getStringExtra("dob");
 
+        // Display Student Details
         binding.studentId.setText(id1);
         binding.studentName.setText(name);
         binding.studentLastname.setText(lastname);
         binding.studentDob.setText(dob);
-
- /*
-        firebaseDatabase.getReference().child("Student Details")
-                .child("students").child(id).addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                        //for each loop
-                        for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                            Student students = dataSnapshot.getValue(Student.class);
-
-                            // Get Data From Firebase Realtime Database
-                            binding.studentId.setText(students.getId());
-                            binding.studentName.setText(students.getName());
-                            binding.studentLastname.setText(students.getLastname());
-                            binding.studentDob.setText(students.getDateOfBirth());
-
-
-                        }
-                        }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
-
-*/
 
 
 /* to See Profile pic from Firebase Realtime Database
@@ -88,7 +61,7 @@ public class Edit_StudentDetails extends AppCompatActivity {
                 });
 */
 
-         // onClicking Update Button
+         // onClicking Update Button / to change Student Details if Any
         binding.updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
